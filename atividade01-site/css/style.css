@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* tira a barra de scroll da horizontal */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Caixa principal que segura a imagem e o texto */
+.secao-sobre {
+    background-color: #fff; /* Fundo cinza bem clarinho */
+    padding: 50px;
+
+    /* A MÁGICA DO ALINHAMENTO */
+    display: flex;
+    align-items: center;    /* Alinha a altura no meio */
+    justify-content: center; /* Centraliza tudo na tela */
+    gap: 40px;              /* Espaço entre a imagem e o texto */
+
+    /* A MÁGICA DO CELULAR (Responsividade) */
+    /* Se a tela for pequena e os itens não couberem, jogue para a linha de baixo! */
+    flex-wrap: wrap;
+}
+
+/* Configurando a caixa da imagem */
+.caixa-imagem {
+    flex: 1;          /* Cresce e divide o espaço com o texto */
+    min-width: 300px; /* Se a tela for menor que 300px, ele pula de linha! */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrumando a imagem para caber certinho dentro da caixa dela */
+.caixa-imagem img {
+    width: 550px;         /* Ocupa 100% do espaço da caixa dela */
+    border-radius: 10px; /* Deixa as bordas arredondadas */
+}
+
+/* Configurando a caixa do texto com a mesma regra da imagem */
+.caixa-texto {
+    flex: 1;          /* Cresce e divide o espaço com a imagem */
+    min-width: 300px; /* O limite antes de quebrar a linha */
+}
+
+/* Deixando o texto com visual profissional */
+.caixa-texto h1 {
+    
+    color: #1e293b;
+    font-size: 70px;
+    margin-bottom: 15px;
+
+    &
+    span {
+        background-color: #FFF;
+        color: #1d4ed8;
+    }
+
+    font-family: "Archivo Black", sans-serif;
+}
+
+.caixa-texto p {
+    color: #475569;
+    line-height: 1.6; /* Aumenta o espaço entre as linhas do texto */
+    font-size: 20px;
+    margin-bottom: 20px;
+    max-width: 80%;
+    font-weight: bold;
+}
+
+/* Estilizando o botão */
+.cabecalho button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cabecalho button:hover {
+    background-color: #1d4ed8; /* Escurece o botão ao passar o mouse */
+}
+
+/* Transforma os itens da lista <ul> em uma linha horizontal */
+.menu ul {
+    list-style: none; /* Remove as bolinhas do HTML */
+    display: flex;     /* Coloca os itens lado a lado */
+    gap: 50px;         /* Espaço entre um link e outro */
+}
+
+.cabecalho {
+    background-color: #FFF;
+    padding: 15px 30px;
+    width: 100%;
+
+    /* ADICIONE ESTAS DUAS LINHAS: */
+    display: flex;
+    justify-content: space-between; /* Empurra a logo pra esquerda e o menu pra direita */
+    align-items: center;            /* Alinha os dois perfeitamente na vertical */
+}
+
+/* Tira o sublinhado e define a cor dos links */
+.menu a {
+    color: #000;
+    text-decoration: none; /* Tira o sublinhado */
+    font-weight: 900;
+    transition: 0.3s;      /* Deixa a mudança de cor suave */
+}
+
+/* O que acontece quando passa o ponteiro do mouse por cima do link */
+.menu a:hover {
+    color: #38bdf8; /* Muda para azul claro */
+}
