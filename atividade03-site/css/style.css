@@ -1,5 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    /* tira a barra de scroll da horizontal */
+    overflow-x: hidden;
+    overflow-y: hidden;
+     background-color: #1a1a1a;
+}
+
+/* Coloca a imagem e o texto da logo lado a lado */
+.logo {
+    display: flex;
+    align-items: center; /* Alinha na altura certinha */
+    gap: 10px;           /* Espaço entre a imagem e a palavra */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Controla o tamanho da imagem da logo para não quebrar a tela */
+.logo img {
+    width: 150px;
+    height: 75px;
+}
+
+/* Transforma os itens da lista <ul> em uma linha horizontal */
+.menu ul {
+    list-style: none; /* Remove as bolinhas do HTML */
+    display: flex;     /* Coloca os itens lado a lado */
+    gap: 20px;         /* Espaço entre um link e outro */
+    font-size: 25px;
+
+    font-family: "Lato", sans-serif;
+}
+
+.cabecalho {
+    padding: 15px 30px;
+    width: 100%;
+
+    /* ADICIONE ESTAS DUAS LINHAS: */
+    display: flex;
+    justify-content: space-between; /* Empurra a logo pra esquerda e o menu pra direita */
+    align-items: center;            /* Alinha os dois perfeitamente na vertical */
+}
+
+/* Tira o sublinhado e define a cor dos links */
+.menu a {
+    color: #ffffff;
+    text-decoration: none; /* Tira o sublinhado */
+    font-weight: 500;
+    transition: 0.3s;      /* Deixa a mudança de cor suave */
+}
+
+/* O que acontece quando passa o ponteiro do mouse por cima do link */
+.menu a:hover {
+    color: #38bdf8; /* Muda para azul claro */
+}
+
+/* Caixa principal que segura a imagem e o texto */
+.secao-sobre {
+    padding: 0 50px;
+    padding-inline: 50px;
+
+    /* A MÁGICA DO ALINHAMENTO */
+    display: flex;
+    align-items: center;    /* Alinha a altura no meio */
+    justify-content: center;/* Centraliza tudo na tela */
+    gap: 40px;              /* Espaço entre a imagem e o texto */
+
+    /* A MÁGICA DO CELULAR (Responsividade) */
+    /* Se a tela for pequena e os itens não couberem, jogue para a linha de baixo! */
+    flex-wrap: wrap;
+}
+
+/* Configurando a caixa do texto com a mesma regra da imagem */
+.caixa-texto {
+    flex: 1;          /* Cresce e divide o espaço com a imagem */
+    min-width: 300px; /* O limite antes de quebrar a linha */
+}
+
+/* Deixando o texto com visual profissional */
+.caixa-texto h1 {
+    color: #1e293b;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.caixa-texto h2 {
+    color: #F2F0EF;
+    line-height: 1.6; /* Aumenta o espaço entre as linhas do texto */
+    font-size: 35px;
+    width: 680px;
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: normal;
+
+    font-family: "Lato", sans-serif;
+}
+
+/* Configurando a caixa da imagem */
+.caixa-imagem {
+    flex: 1;          /* Cresce e divide o espaço com o texto */
+    min-width: 300px; /* Se a tela for menor que 300px, ele pula de linha! */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrumando a imagem para caber certinho dentro da caixa dela */
+.caixa-imagem img {
+    width: 475px;         /* Ocupa 100% do espaço da caixa dela */
+    border-radius: 10px; /* Deixa as bordas arredondadas */
+}
+
+.caixa-texto img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.juice {
+    display: flex;
+    
+}
+
+.juice img {
+    width: 125px;
 }
